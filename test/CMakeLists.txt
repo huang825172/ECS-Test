@@ -1,0 +1,5 @@
+add_subdirectory(deps)
+
+add_executable(test_engine_hello hello.cpp)
+target_link_libraries(test_engine_hello s1mpleEngine gtest_main)
+gtest_discover_tests(test_engine_hello)
