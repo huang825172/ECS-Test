@@ -129,4 +129,4 @@ int triangle() {
   return 0;
 }
 
-TEST(GLTest, BasicAssertions) { EXPECT_EQ(triangle(), 0); }
+TEST(GLTest, drawTriangle) { EXPECT_EQ(triangle(), 0); }

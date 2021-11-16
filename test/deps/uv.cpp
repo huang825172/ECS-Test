@@ -10,4 +10,4 @@ int uv() {
   return 0;
 }
 
-TEST(UVTest, BasicAssertions) { ASSERT_EQ(uv(), 0); }
+TEST(UVTest, linkTest) { ASSERT_EQ(uv(), 0); }

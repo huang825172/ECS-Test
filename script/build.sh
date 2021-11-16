@@ -21,7 +21,6 @@ echo "Rearranging binaries..."
 if [ ! -d "bin" ]; then
     mkdir bin
 fi
-cp s1mpleEngine bin
 cp test/deps/sf.spv bin
 cp test/deps/sv.spv bin
 
