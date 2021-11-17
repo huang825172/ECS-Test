@@ -1,5 +1,3 @@
-#include "s1mpleEngine.h"
+#include <s1e/s1mpleEngine.h>
 
-namespace s1mpleEngine {
-  const char* VERSION = "0.0.1";
-}
+const char* s1mpleEngine::VERSION = "0.0.1";

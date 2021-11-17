@@ -7,7 +7,15 @@ set(CMAKE_CXX_STANDARD 17)
 include(FetchDependencies.cmake)
 
 # Engine library
-add_library(s1mpleEngine src/s1mpleEngine.cpp)
+add_library(
+    s1mpleEngine
+    src/s1mpleEngine.cpp
+    src/ecs/misc.cpp
+    src/ecs/world.cpp
+    src/ecs/entity.cpp
+    src/ecs/component.cpp
+    src/ecs/system.cpp
+)
 target_include_directories(s1mpleEngine PUBLIC include)
 
 # Build unit tests

@@ -1,4 +1,4 @@
-#include <ecs/system.h>
+#include <s1e/s1mpleEngine.h>
 #include <gtest/gtest.h>
 
 struct Transform
@@ -13,13 +13,10 @@ struct Rigidbody
     int vel;
 };
 
-class Animator{
-    int id;
-};
-
-
-void basicSystem(Query<Transform, Rigidbody, Animator> query) { query.iter(); }
+void basicSystem(ecs::Query<Transform, Rigidbody> query) { query.iter(); }
 
 TEST(EngineTest, ECS) {
+    ecs::World world;
+    world.spawn()->insert(Transform{1,2,3})->insert(Rigidbody{1})->build();
     createQuery(basicSystem);
 }
