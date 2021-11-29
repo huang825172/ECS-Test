@@ -5,6 +5,10 @@
 
 namespace ecs {
 
+struct Component {
+  size_t type_hash;
+};
+
 class ComponentMap {
  private:
   std::map<size_t, size_t> storage;
@@ -22,6 +26,7 @@ class ArchetypeList {
   std::vector<Archetype> storage;
 
  public:
+  size_t tryAdd(Archetype arch);
   size_t identify(Archetype arch);
 };
 
