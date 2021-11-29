@@ -20,6 +20,9 @@ typedef std::vector<size_t> Archetype;
 class ArchetypeList {
  private:
   std::vector<Archetype> storage;
+
+ public:
+  size_t identify(Archetype arch);
 };
 
 }  // namespace ecs

@@ -8,4 +8,11 @@ void ecs::EntityBuilder::build() {
             [this](ComponentInfo a, ComponentInfo b) {
               return compMap[a.type_hash] < compMap[b.type_hash];
             });
+
+  // Register and get an ID of the archetype
+  Archetype arch;
+  for (auto i = compList.begin(); i != compList.end(); i++)
+    arch.push_back(i->type_hash);
+  auto archID = archList.identify(arch);
+  std::cout << archID << std::endl;
 }

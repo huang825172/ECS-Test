@@ -12,12 +12,12 @@ namespace ecs {
 class EntityBuilder {
  private:
   ComponentMap& compMap;
-  ArchetypeList& archMap;
+  ArchetypeList& archList;
   std::vector<ComponentInfo> compList;
 
  public:
   EntityBuilder(ComponentMap& componentMap, ArchetypeList& archetypeList)
-      : compMap(componentMap), archMap(archetypeList) {}
+      : compMap(componentMap), archList(archetypeList) {}
 
   template <class T>
   EntityBuilder* insert(T component) {
