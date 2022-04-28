@@ -2,7 +2,8 @@
 
 Try to implement simple ECS concepts.
 
-'''cpp
+```cpp
+// Example:
 
 #include <gtest/gtest.h>
 #include <s1e/s1mpleEngine.h>
@@ -28,8 +29,7 @@ TEST(EngineTest, ECS) {
   world.spawn()->insert(Transform{1, 2, 3})->build();
   createQuery(basicSystem);
 }
-
-'''
+```
 
 Dependencies added:
 + glfw
